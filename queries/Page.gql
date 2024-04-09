@@ -1,0 +1,43 @@
+query Page($slug: String!) {
+  page(where: { slug: $slug }) {
+    slug
+    openGraphTitle
+    openGraphDescription
+    openGraphImage {
+      ...ImageFields
+    }
+    subPages {
+      slug
+    }
+    parentPage {
+      slug
+    }
+    components {
+      __typename
+      ... on Banner {
+        ...BannerFields
+      }
+      ... on Hero {
+        ...HeroFields
+      }
+      ... on Image {
+        ...ImageComponentFields
+      }
+      ... on ImageGallary {
+        ...ImageGalleryFields
+      }
+      ... on List {
+        ...ListFields
+      }
+      ... on ScheduleOverview {
+        ...ScheduleOverviewFields
+      }
+      ... on Text {
+        ...TextFields
+      }
+      ... on TextMedia {
+        ...TextMediaFields
+      }
+    }
+  }
+}

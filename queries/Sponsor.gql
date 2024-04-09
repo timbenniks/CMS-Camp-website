@@ -1,0 +1,38 @@
+query Sponsor($slug: String!) {
+  sponsor(where: { slug: $slug }) {
+    slug
+    name
+    sponsorDescription
+    logo {
+      ...ImageFields
+    }
+    sponsorStatus
+    masterclass {
+      slug
+    }
+    components {
+      __typename
+      ... on Banner {
+        ...BannerFields
+      }
+      ... on Hero {
+        ...HeroFields
+      }
+      ... on Image {
+        ...ImageComponentFields
+      }
+      ... on ImageGallary {
+        ...ImageGalleryFields
+      }
+      ... on List {
+        ...ListFields
+      }
+      ... on Text {
+        ...TextFields
+      }
+      ... on TextMedia {
+        ...TextMediaFields
+      }
+    }
+  }
+}

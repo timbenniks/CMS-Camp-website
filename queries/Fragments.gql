@@ -1,0 +1,133 @@
+fragment CTAfields on Cta {
+  externalUrl
+  style
+  label
+  icon {
+    url
+  }
+  linkedPage {
+    slug
+  }
+}
+
+fragment ImageFields on Asset {
+  url
+  width
+  height
+  fileName
+}
+
+fragment BannerFields on Banner {
+  title
+  content {
+    html
+  }
+  noBackground
+  showSupporters
+  primaryCtas {
+    ...CTAfields
+  }
+  secondaryCtas {
+    ...CTAfields
+  }
+}
+
+fragment HeroFields on Hero {
+  headline
+  description
+  backgroundImage {
+    ...ImageFields
+  }
+  backgroundImageDarkness
+  logoImage {
+    url
+  }
+  ctas {
+    ...CTAfields
+  }
+}
+
+fragment ImageComponentFields on Image {
+  title
+  image {
+    ...ImageFields
+  }
+  ctAs {
+    ...CTAfields
+  }
+}
+
+fragment ImageGalleryFields on ImageGallary {
+  title
+  images {
+    ...ImageFields
+  }
+}
+
+fragment NewsArticleFields on NewsArticle {
+  slug
+  title
+  subtitle
+  description
+  image {
+    ...ImageFields
+  }
+}
+
+fragment SponsorFields on Sponsor {
+  slug
+  name
+  sponsorDescription
+  url
+  sponsorStatus
+  logo {
+    ...ImageFields
+  }
+  masterclass {
+    slug
+  }
+}
+
+fragment ListFields on List {
+  linkedContent {
+    ... on NewsArticle {
+      ...NewsArticleFields
+    }
+    ... on Sponsor {
+      ...SponsorFields
+    }
+  }
+}
+
+fragment ScheduleOverviewFields on ScheduleOverview {
+  title
+  schedules {
+    day
+    slots {
+      slot
+      time
+    }
+  }
+}
+
+fragment TextFields on Text {
+  title
+  titleType
+  subtitle
+  subtitleType
+  content {
+    html
+  }
+  ctas {
+    ...CTAfields
+  }
+}
+
+fragment TextMediaFields on TextMedia {
+  media {
+    ...ImageFields
+  }
+  text {
+    ...TextFields
+  }
+}
