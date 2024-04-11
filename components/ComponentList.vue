@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getComponentForName } from "./componentMapper";
+import { getComponentForName } from "~/utils/componentMapper";
 
 const props = defineProps({
   data: {

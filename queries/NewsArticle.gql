@@ -1,5 +1,6 @@
 query NewsArticle($slug: String!) {
   newsArticle(where: { slug: $slug }) {
+    __typename
     slug
     title
     subtitle

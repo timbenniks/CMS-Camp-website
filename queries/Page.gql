@@ -1,5 +1,6 @@
 query Page($slug: String!) {
   page(where: { slug: $slug }) {
+    __typename
     slug
     openGraphTitle
     openGraphDescription

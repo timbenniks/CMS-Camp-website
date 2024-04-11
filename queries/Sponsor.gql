@@ -1,5 +1,6 @@
 query Sponsor($slug: String!) {
   sponsor(where: { slug: $slug }) {
+    __typename
     slug
     name
     sponsorDescription

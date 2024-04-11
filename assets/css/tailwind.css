@@ -24,4 +24,12 @@
   .cta:hover {
     @apply bg-tertiary text-light border-tertiary no-underline;
   }
+
+  .cta.secondary {
+    @apply bg-light text-primary border-light;
+  }
+
+  .cta.secondary:hover {
+    @apply bg-light text-tertiary border-tertiary no-underline;
+  }
 }

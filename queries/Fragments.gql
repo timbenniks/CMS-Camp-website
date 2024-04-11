@@ -39,6 +39,16 @@ fragment HeroFields on Hero {
   description
   backgroundImage {
     ...ImageFields
+    image: url(
+      transformation: {
+        image: {
+          resize: { width: 1440, height: 732, fit: crop }
+          compress: { metadata: true }
+          quality: { value: 100 }
+        }
+        document: { output: { format: autoImage } }
+      }
+    )
   }
   backgroundImageDarkness
   logoImage {
