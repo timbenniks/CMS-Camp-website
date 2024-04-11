@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: #fff;
+    @apply text-primary;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  a {
+    @apply text-primary hover:text-secondary hover:underline;
+  }
+
+  .cta {
+    @apply px-3 py-2 bg-primary rounded border-2 border-primary text-light text-2xl font-black uppercase tracking-wide;
+  }
+
+  .cta:hover {
+    @apply bg-tertiary text-light border-tertiary no-underline;
+  }
+}

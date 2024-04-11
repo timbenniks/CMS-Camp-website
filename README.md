@@ -40,7 +40,10 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 # TODO
 
-- Footer
-- Session list
-- Session form
-- Faces list
+Session form flow:
+
+- create asset
+- create speaker
+  - connect asset to speaker
+- create session
+  - connect speaker to session

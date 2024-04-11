@@ -1,9 +1,12 @@
 query Navigation {
   navigation(where: { id: "cluqwbip82dc707w2m14gg677" }) {
     title
-    page {
-      slug
-      subPages {
+    navigationItem {
+      id
+      label
+      externalLink
+      highlighted
+      page {
         slug
       }
     }
