@@ -20,7 +20,7 @@ const props = defineProps([
         height="732"
         :quality="100"
         sizes="sm:100vw"
-        :alt="headline"
+        :alt="headline || 'Hero'"
         fit="crop"
       />
       <div
@@ -35,7 +35,7 @@ const props = defineProps([
       class="absolute w-2/3 h-auto top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
       :width="logoImage.width"
       :height="logoImage.height"
-      :alt="headline"
+      :alt="headline || 'Hero'"
     />
 
     <div

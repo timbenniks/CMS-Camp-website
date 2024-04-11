@@ -19,7 +19,7 @@ function getUrl(item: any) {
 </script>
 <template>
   <header class="h-[161]px flex justify-between py-10">
-    <nuxt-link to="/">
+    <nuxt-link to="/" aria-label="Home">
       <Logo />
     </nuxt-link>
     <ul v-if="navigationItems" class="flex items-center">
