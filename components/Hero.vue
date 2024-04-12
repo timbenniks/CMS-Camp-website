@@ -10,48 +10,44 @@ const props = defineProps([
 </script>
 
 <template>
-  <div class="mb-20 aspect-[1440/732] relative text-light">
-    <div class="relative aspect-[1440/732]">
-      <NuxtImg
-        provider="hygraph"
-        :src="backgroundImage.url"
-        class="absolute w-full h-auto"
-        width="1440"
-        height="732"
-        :quality="100"
-        sizes="sm:100vw"
-        :alt="headline || 'Hero'"
-        fit="crop"
-      />
-      <div
-        class="bg-black absolute top-0 left-0 w-full h-full"
-        :style="`opacity: ${backgroundImageDarkness / 100}`"
-      ></div>
-    </div>
+  <div
+    :style="`background-image: url(${props.backgroundImage.image})`"
+    class="mb-20 text-light relative overflow-hidden md:aspect-[1440/732] bg-cover"
+    :class="logoImage ? 'aspect-[390/240]' : 'aspect-[390/673]'"
+  >
+    <div
+      class="bg-black absolute top-0 left-0 w-full h-full"
+      :style="`opacity: ${backgroundImageDarkness / 100}`"
+    ></div>
 
-    <img
+    <NuxtImg
       v-if="logoImage"
+      provider="hygraph"
       :src="logoImage.url"
       class="absolute w-2/3 h-auto top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
-      :width="logoImage.width"
-      :height="logoImage.height"
+      width="712"
+      height="175"
+      sizes="sm:220px md:500px lg:700px"
       :alt="headline || 'Hero'"
+      fit="crop"
     />
 
     <div
       v-else
-      class="max-w-screen-md absolute w-2/3 h-auto top-2/4 left-32 -translate-y-2/4"
+      class="p-6 sm:p-12 lg:max-w-screen-md absolute lg:w-2/3 lg:h-auto top-2/4 lg:left-32 -translate-y-2/4"
     >
       <h1
         v-if="headline"
-        class="text-light text-6xl mb-6 font-bold leading-none"
+        class="text-4xl text-light lg:text-6xl mb-6 font-bold leading-none"
       >
         {{ headline }}
       </h1>
       <p v-if="description" class="text-light text-xl mb-6">
         {{ description }}
       </p>
-      <div class="flex space-x-2">
+      <div
+        class="flex space-y-2 sm:space-x-2 sm:space-y-0 flex-col sm:flex-row"
+      >
         <cta v-for="cta in ctas" :cta="cta" :key="cta.id" />
       </div>
     </div>

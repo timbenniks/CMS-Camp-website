@@ -42,9 +42,9 @@ fragment HeroFields on Hero {
     image: url(
       transformation: {
         image: {
-          resize: { width: 1440, height: 732, fit: crop }
+          resize: { width: 1440, height: 1000, fit: max }
           compress: { metadata: true }
-          quality: { value: 100 }
+          quality: { value: 80 }
         }
         document: { output: { format: autoImage } }
       }

@@ -18,7 +18,7 @@
   }
 
   .cta {
-    @apply px-3 py-2 bg-primary rounded border-2 border-primary text-light text-2xl font-black uppercase tracking-wide;
+    @apply px-3 py-2 bg-primary rounded border-2 border-primary text-light text-2xl font-black uppercase tracking-wide text-center;
   }
 
   .cta:hover {
