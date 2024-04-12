@@ -40,10 +40,10 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 # TODO
 
-Session form flow:
-
-- create asset
-- create speaker
-  - connect asset to speaker
-- create session
-  - connect speaker to session
+- CTA small
+- Session form flow
+  - create asset
+  - create speaker
+    - connect asset to speaker
+  - create session
+    - connect speaker to session

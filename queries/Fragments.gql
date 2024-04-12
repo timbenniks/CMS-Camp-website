@@ -144,6 +144,8 @@ fragment TextFields on Text {
 
 fragment TextMediaFields on TextMedia {
   id
+  title
+  mediaFirst
   media {
     ...ImageFields
   }
