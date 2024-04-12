@@ -17,11 +17,13 @@
     @apply text-primary hover:text-secondary hover:underline;
   }
 
-  .cta {
+  .cta,
+  .tabs-component-tab-a {
     @apply px-3 py-2 bg-primary rounded border-2 border-primary text-light text-2xl font-black uppercase tracking-wide text-center;
   }
 
-  .cta:hover {
+  .cta:hover,
+  .tabs-component-tab-a:hover {
     @apply bg-tertiary text-light border-tertiary no-underline;
   }
 

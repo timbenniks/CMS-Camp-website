@@ -18,7 +18,7 @@ function getUrl(item: any) {
 }
 </script>
 <template>
-  <header class="h-[161]px flex justify-between py-10">
+  <header class="px-6 lg:px-0 h-[161]px flex justify-between py-10">
     <nuxt-link to="/" aria-label="Home">
       <Logo />
     </nuxt-link>
