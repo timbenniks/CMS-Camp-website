@@ -36,7 +36,7 @@ defineProps(["title", "schedules"]);
 }
 
 .tabs-component-tab-a {
-  @apply opacity-30;
+  @apply opacity-50;
 }
 
 .tabs-component-tab-a.is-active {
