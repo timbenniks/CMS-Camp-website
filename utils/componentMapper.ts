@@ -5,12 +5,13 @@ import ScheduleOverview from "@/components/ScheduleOverview.vue"
 import Text from "@/components/Text.vue"
 import TextMedia from "@/components/TextMedia.vue"
 import ImageGallary from "@/components/ImageGallary.vue"
+import Banner from "@/components/Banner.vue"
 
 type Mapping = {
   [name: string]: Component
 }
 
-export const mapping: Mapping = { Hero, ScheduleOverview, Text, TextMedia, ImageGallary };
+export const mapping: Mapping = { Hero, ScheduleOverview, Text, TextMedia, ImageGallary, Banner };
 
 export function getComponentForName(name: string) {
   return mapping[name] ?? NoComponent

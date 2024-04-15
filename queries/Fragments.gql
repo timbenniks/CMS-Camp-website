@@ -3,9 +3,7 @@ fragment CTAfields on Cta {
   externalUrl
   style
   label
-  icon {
-    url
-  }
+  socialMediaIcon
   linkedPage {
     slug
   }

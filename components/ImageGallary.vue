@@ -43,8 +43,12 @@ const breakpoints = ref({
 
         <template #addons>
           <Navigation>
-            <Prev #prev />
-            <Next #next />
+            <template #prev>
+              <Prev />
+            </template>
+            <template #next>
+              <Next />
+            </template>
           </Navigation>
         </template>
       </carousel>
@@ -58,11 +62,32 @@ const breakpoints = ref({
   --vc-pgn-height: 8px;
 }
 
+.carousel {
+  @apply mb-32 md:mb-0;
+}
+
 .carousel__slide {
   opacity: 0.2;
+  transition: opacity 0.4s;
 }
 
 .carousel__slide.carousel__slide--active {
   opacity: 1;
+}
+
+.carousel__prev,
+.carousel__next {
+  @apply m-0 w-8 h-8 md:w-14 md:h-14 top-[114%] md:top-2/4;
+}
+
+.carousel__prev svg,
+.carousel__next svg {
+  width: 100%;
+  height: auto;
+}
+
+.carousel__next:hover,
+.carousel__prev:hover {
+  opacity: 0.9;
 }
 </style>
