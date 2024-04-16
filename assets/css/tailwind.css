@@ -34,4 +34,20 @@
   .cta.secondary:hover {
     @apply bg-light text-tertiary border-tertiary no-underline;
   }
+
+  .cta-icon {
+    @apply w-20 h-20;
+  }
+
+  .cta-icon:hover svg path {
+    @apply !fill-secondary;
+  }
+
+  .cta-icon.primary svg path {
+    @apply fill-primary;
+  }
+
+  .cta-icon.secondary svg path {
+    @apply fill-light;
+  }
 }

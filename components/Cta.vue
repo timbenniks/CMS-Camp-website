@@ -7,7 +7,15 @@ const to = computed(() => {
 </script>
 
 <template>
-  <nuxt-link :class="`cta ${cta.style || ''}`" :to="to">
-    {{ cta.label }}
+  <nuxt-link
+    :class="`${cta.style || ''} ${cta.socialMediaIcon ? 'cta-icon' : 'cta'} `"
+    :to="to"
+  >
+    <template v-if="cta.socialMediaIcon">
+      <Twitter v-if="cta.socialMediaIcon === 'Twitter'" />
+      <Facebook v-if="cta.socialMediaIcon === 'Facebook'" />
+      <LinkedIn v-if="cta.socialMediaIcon === 'LinkedIn'" />
+    </template>
+    <template v-else>{{ cta.label }}</template>
   </nuxt-link>
 </template>

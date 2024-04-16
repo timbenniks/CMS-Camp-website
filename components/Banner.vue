@@ -10,8 +10,12 @@ defineProps([
 
 <template>
   <article
-    class="mb-20 bg-cover text-center p-"
-    :class="noBackground ? 'text-primary' : 'bg-[url(/banner.jpg)] text-light'"
+    class="mb-20 bg-cover text-center p-20 mx-6 2xl:mx-0"
+    :class="
+      noBackground
+        ? 'text-primary border border-primary'
+        : 'bg-[url(/banner.jpg)] text-light'
+    "
   >
     <h3 v-if="title" class="text-3xl md:text-5xl font-bold mb-2">
       {{ title }}
@@ -25,13 +29,14 @@ defineProps([
     />
 
     <div
-      class="flex space-y-2 justify-center sm:space-x-2 sm:space-y-0 flex-col sm:flex-row mt-10"
+      v-if="primaryCtas.length"
+      class="flex justify-center space-y-2 sm:space-x-4 sm:space-y-0 flex-col sm:flex-row mt-10"
     >
       <cta v-for="cta in primaryCtas" :cta="cta" :key="cta.id" />
     </div>
-
     <div
-      class="flex space-y-2 sm:space-x-2 sm:space-y-0 flex-col sm:flex-row mt-10"
+      v-if="secondaryCtas.length"
+      class="flex justify-center space-y-2 sm:space-x-4 sm:space-y-0 flex-col sm:flex-row mt-10"
     >
       <cta v-for="cta in secondaryCtas" :cta="cta" :key="cta.id" />
     </div>
