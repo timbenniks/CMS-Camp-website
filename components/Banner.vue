@@ -10,7 +10,7 @@ defineProps([
 
 <template>
   <article
-    class="mb-20 bg-cover text-center p-20 mx-6 2xl:mx-0"
+    class="mb-20 bg-cover text-center p-8 sm:p-20 mx-6 2xl:mx-0"
     :class="
       noBackground
         ? 'text-primary border border-primary'
@@ -30,13 +30,23 @@ defineProps([
 
     <div
       v-if="primaryCtas.length"
-      class="flex justify-center space-y-2 sm:space-x-4 sm:space-y-0 flex-col sm:flex-row mt-10"
+      :class="
+        !!primaryCtas[0].socialMediaIcon
+          ? 'flex-row space-x-12'
+          : 'flex-col sm:flex-row space-y-2 sm:space-x-4 sm:space-y-0'
+      "
+      class="flex justify-center mt-10"
     >
       <cta v-for="cta in primaryCtas" :cta="cta" :key="cta.id" />
     </div>
     <div
       v-if="secondaryCtas.length"
-      class="flex justify-center space-y-2 sm:space-x-4 sm:space-y-0 flex-col sm:flex-row mt-10"
+      :class="
+        !!secondaryCtas[0].socialMediaIcon
+          ? 'flex-row space-x-12'
+          : 'flex-col sm:flex-row space-y-2 sm:space-x-4 sm:space-y-0'
+      "
+      class="flex justify-center mt-10"
     >
       <cta v-for="cta in secondaryCtas" :cta="cta" :key="cta.id" />
     </div>
