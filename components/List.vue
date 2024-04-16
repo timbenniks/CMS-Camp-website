@@ -4,21 +4,21 @@ import { getComponentForName } from "~/utils/componentMapper";
 const props = defineProps(["title", "itemsPerRow", "linkedContent"]);
 
 const cols = computed(() => {
-  let cols = 1;
+  let cols = "grid-cols-1 md:grid-cols-1";
 
   switch (props.itemsPerRow) {
     case "one":
-      cols = 1;
+      cols = `grid-cols-1 md:grid-cols-1`;
       break;
     case "two":
-      cols = 2;
+      cols = `grid-cols-1 md:grid-cols-2`;
       break;
     case "three":
-      cols = 3;
+      cols = `grid-cols-1 md:grid-cols-3`;
       break;
   }
 
-  return `grid-cols-1 md:grid-cols-${cols}`;
+  return cols;
 });
 </script>
 
@@ -30,7 +30,7 @@ const cols = computed(() => {
     >
       {{ title }}
     </h3>
-    <div class="grid" :class="cols">
+    <div class="grid lg:gap-20" :class="cols">
       <component
         v-for="component in linkedContent"
         :is="getComponentForName(component?.__typename)"

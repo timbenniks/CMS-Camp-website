@@ -19,8 +19,8 @@ defineProps([
         v-if="logo"
         provider="hygraph"
         :src="logo.url"
-        :width="logo.width"
-        :height="logo.height"
+        :width="470"
+        :height="200"
         sizes="sm:220px md:500px md:700px"
         :alt="name || ''"
         class="max-w-[300px] lg:max-w-[600px] mx-auto"
@@ -44,18 +44,19 @@ defineProps([
     </div>
   </template>
   <template v-if="sponsorStatus === 'silver'">
-    <div class="mb-20">
+    <div class="mb-20 text-center">
       <NuxtImg
         v-if="logo"
         provider="hygraph"
         :src="logo.url"
-        :width="logo.width"
-        :height="logo.height"
+        :width="470"
+        :height="200"
         sizes="sm:220px md:500px md:700px"
         :alt="name || ''"
         class="max-w-[470px] mx-auto"
+        fit="crop"
       />
-      <article class="px-32">
+      <article class="lg:px-32">
         <h3 class="text-neutral-400 font-bold text-3xl mb-6" v-if="name">
           {{ name }}
         </h3>
@@ -63,5 +64,21 @@ defineProps([
       </article>
     </div>
   </template>
-  <template v-if="sponsorStatus === 'bronze'"></template>
+  <template v-if="sponsorStatus === 'bronze'">
+    <div class="mb-20">
+      <nuxt-link :to="url">
+        <NuxtImg
+          v-if="logo"
+          provider="hygraph"
+          :src="logo.url"
+          :width="470"
+          :height="245"
+          sizes="sm:220px md:500px md:700px"
+          :alt="name || ''"
+          class="max-w-[470px] mx-auto"
+          fit="crop"
+        />
+      </nuxt-link>
+    </div>
+  </template>
 </template>
