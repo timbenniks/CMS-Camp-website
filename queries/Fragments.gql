@@ -78,6 +78,7 @@ fragment ImageGalleryFields on ImageGallary {
 
 fragment NewsArticleFields on NewsArticle {
   id
+  __typename
   slug
   title
   subtitle
@@ -89,8 +90,10 @@ fragment NewsArticleFields on NewsArticle {
 
 fragment SponsorFields on Sponsor {
   id
+  __typename
   slug
   name
+  tagline
   sponsorDescription
   url
   sponsorStatus
@@ -102,14 +105,49 @@ fragment SponsorFields on Sponsor {
   }
 }
 
+fragment SessionFields on Session {
+  id
+  __typename
+  title
+  theme
+  sessionType
+  speaker {
+    id
+    __typename
+    name
+  }
+}
+
+fragment SpeakerFields on Speaker {
+  id
+  __typename
+  name
+  description
+  url
+  image {
+    ...ImageFields
+  }
+  sessions {
+    ...SessionFields
+  }
+}
+
 fragment ListFields on List {
   id
+  title
+  itemsPerRow
   linkedContent {
     ... on NewsArticle {
       ...NewsArticleFields
     }
     ... on Sponsor {
       ...SponsorFields
+    }
+    ... on Speaker {
+      ...SpeakerFields
+    }
+    ... on Session {
+      ...SessionFields
     }
   }
 }

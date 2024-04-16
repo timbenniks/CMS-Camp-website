@@ -13,7 +13,7 @@ query Page($slug: String!) {
     parentPage {
       slug
     }
-    components {
+    components(first: 100) {
       __typename
       ... on Banner {
         ...BannerFields

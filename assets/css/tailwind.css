@@ -35,6 +35,10 @@
     @apply bg-light text-tertiary border-tertiary no-underline;
   }
 
+  .cta.small {
+    @apply px-2 py-1 text-sm;
+  }
+
   .cta-icon {
     @apply w-14 h-14 sm:w-20 sm:h-20;
   }
