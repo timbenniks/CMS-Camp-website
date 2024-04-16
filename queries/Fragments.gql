@@ -83,6 +83,7 @@ fragment NewsArticleFields on NewsArticle {
   title
   subtitle
   description
+  slug
   image {
     ...ImageFields
   }

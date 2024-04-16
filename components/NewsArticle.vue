@@ -1,0 +1,37 @@
+<script setup lang="ts">
+const props = defineProps([
+  "id",
+  "slug",
+  "slug",
+  "title",
+  "subtitle",
+  "description",
+  "image",
+]);
+</script>
+
+<template>
+  <div class="grid grid-cols-1 lg:grid-cols-2 mb-20">
+    <NuxtImg
+      v-if="image"
+      provider="hygraph"
+      :src="image.url"
+      :width="500"
+      :height="500"
+      sizes="sm:220px md:500px md:700px"
+      :alt="title || ''"
+      class="lg:max-w-[469px]"
+      fit="crop"
+    />
+    <article class="flex flex-col justify-center">
+      <h3 class="font-bold text-5xl mb-2" v-if="title">
+        {{ title }}
+      </h3>
+      <p class="font-bold mb-4" v-if="subtitle">{{ subtitle }}</p>
+      <div class="prose" v-html="description" />
+      <p class="mt-10">
+        <nuxt-link :to="slug" class="cta small">More about</nuxt-link>
+      </p>
+    </article>
+  </div>
+</template>

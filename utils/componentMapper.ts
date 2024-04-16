@@ -8,12 +8,13 @@ import ImageGallary from "@/components/ImageGallary.vue"
 import Banner from "@/components/Banner.vue"
 import List from "@/components/List.vue"
 import Sponsor from "@/components/Sponsor.vue"
+import NewsArticle from "@/components/NewsArticle.vue"
 
 type Mapping = {
   [name: string]: Component
 }
 
-export const mapping: Mapping = { Hero, ScheduleOverview, Text, TextMedia, ImageGallary, Banner, List, Sponsor };
+export const mapping: Mapping = { Hero, ScheduleOverview, Text, TextMedia, ImageGallary, Banner, List, Sponsor, NewsArticle };
 
 export function getComponentForName(name: string) {
   return mapping[name] ?? NoComponent
