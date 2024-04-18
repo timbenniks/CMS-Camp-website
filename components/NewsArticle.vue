@@ -2,7 +2,6 @@
 const props = defineProps([
   "id",
   "slug",
-  "slug",
   "title",
   "subtitle",
   "description",
@@ -20,7 +19,7 @@ const props = defineProps([
       :height="500"
       sizes="sm:220px md:500px md:700px"
       :alt="title || ''"
-      class="lg:max-w-[469px]"
+      class="lg:max-w-[469px] mb-8 lg:mb-0"
       fit="crop"
     />
     <article class="flex flex-col justify-center">

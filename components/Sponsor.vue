@@ -65,7 +65,7 @@ defineProps([
     </div>
   </template>
   <template v-if="sponsorStatus === 'bronze'">
-    <div class="mb-20">
+    <div class="mb-20 px-20">
       <nuxt-link :to="url">
         <NuxtImg
           v-if="logo"

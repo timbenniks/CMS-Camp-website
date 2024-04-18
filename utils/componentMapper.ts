@@ -9,12 +9,14 @@ import Banner from "@/components/Banner.vue"
 import List from "@/components/List.vue"
 import Sponsor from "@/components/Sponsor.vue"
 import NewsArticle from "@/components/NewsArticle.vue"
+import Speaker from "@/components/Speaker.vue"
+import Session from "@/components/Session.vue"
 
 type Mapping = {
   [name: string]: Component
 }
 
-export const mapping: Mapping = { Hero, ScheduleOverview, Text, TextMedia, ImageGallary, Banner, List, Sponsor, NewsArticle };
+export const mapping: Mapping = { Hero, ScheduleOverview, Text, TextMedia, ImageGallary, Banner, List, Sponsor, NewsArticle, Speaker, Session };
 
 export function getComponentForName(name: string) {
   return mapping[name] ?? NoComponent

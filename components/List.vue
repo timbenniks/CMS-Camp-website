@@ -30,7 +30,7 @@ const cols = computed(() => {
     >
       {{ title }}
     </h3>
-    <div class="grid lg:gap-20" :class="cols">
+    <div class="grid lg:gap-4" :class="cols">
       <component
         v-for="component in linkedContent"
         :is="getComponentForName(component?.__typename)"

@@ -111,11 +111,17 @@ fragment SessionFields on Session {
   __typename
   title
   theme
-  sessionType
+  sessionTheme {
+    theme
+    color {
+      hex
+    }
+  }
   speaker {
-    id
-    __typename
     name
+    image {
+      url
+    }
   }
 }
 
