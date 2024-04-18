@@ -50,6 +50,7 @@ useJsonld({
     <main>
       <NuxtPage />
     </main>
+    <GlobalFooter />
   </div>
 </template>
 <style>
