@@ -1,11 +1,7 @@
 query Footer {
   footer(where: { id: "clutp8sbo627g08w5jh00fyl9" }) {
-    id
     sponsorsTitle
     organizersTitle
-    logo {
-      ...ImageFields
-    }
     organizers {
       id
       logo {
