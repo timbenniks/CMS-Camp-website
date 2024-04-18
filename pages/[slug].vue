@@ -6,7 +6,5 @@ useOGTags(page);
 </script>
 
 <template>
-  <template>
-    <RenderPage :data="page" />
-  </template>
+  <RenderPage :data="page" />
 </template>

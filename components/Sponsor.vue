@@ -38,7 +38,9 @@ defineProps([
           <nuxt-link :to="masterclass.url" class="cta small"
             >Masterclass</nuxt-link
           >
-          <nuxt-link :to="url" class="cta small">More about</nuxt-link>
+          <nuxt-link :to="`/sponsor/${slug}`" class="cta small"
+            >More about</nuxt-link
+          >
         </div>
       </article>
     </div>
@@ -60,7 +62,11 @@ defineProps([
         <h3 class="text-neutral-400 font-bold text-3xl mb-6" v-if="name">
           {{ name }}
         </h3>
-        <p><nuxt-link :to="url" class="cta small">More about</nuxt-link></p>
+        <p>
+          <nuxt-link :to="`/sponsor/${slug}`" class="cta small"
+            >More about</nuxt-link
+          >
+        </p>
       </article>
     </div>
   </template>
