@@ -24,7 +24,7 @@ export async function useGetContentForType(properties: Props) {
     case 'Sponsor':
       result = data.value.sponsor
       break;
-    case 'NewsArticle':
+    case 'News':
       result = data.value.newsArticle
       break;
   }

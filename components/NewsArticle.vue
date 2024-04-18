@@ -29,7 +29,9 @@ const props = defineProps([
       <p class="font-bold mb-4" v-if="subtitle">{{ subtitle }}</p>
       <div class="prose" v-html="description" />
       <p class="mt-10">
-        <nuxt-link :to="slug" class="cta small">More about</nuxt-link>
+        <nuxt-link :to="`/news/${slug}`" class="cta small"
+          >More about</nuxt-link
+        >
       </p>
     </article>
   </div>

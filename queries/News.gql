@@ -1,0 +1,40 @@
+query News($slug: String!) {
+  newsArticle(where: { slug: $slug }) {
+    __typename
+    slug
+    title
+    subtitle
+    description
+    image {
+      ...ImageFields
+    }
+
+    components(first: 100) {
+      __typename
+      ... on Banner {
+        ...BannerFields
+      }
+      ... on Hero {
+        ...HeroFields
+      }
+      ... on Image {
+        ...ImageComponentFields
+      }
+      ... on ImageGallary {
+        ...ImageGalleryFields
+      }
+      ... on List {
+        ...ListFields
+      }
+      ... on ScheduleOverview {
+        ...ScheduleOverviewFields
+      }
+      ... on Text {
+        ...TextFields
+      }
+      ... on TextMedia {
+        ...TextMediaFields
+      }
+    }
+  }
+}
