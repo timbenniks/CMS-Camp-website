@@ -1,5 +1,5 @@
-query News($slug: String!) {
-  newsArticle(where: { slug: $slug }) {
+query News($slug: String!, $stage: Stage! = PUBLISHED) {
+  newsArticle(where: { slug: $slug }, stage: $stage) {
     __typename
     slug
     title

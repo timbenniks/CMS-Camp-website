@@ -1,5 +1,5 @@
-query Sponsor($slug: String!) {
-  sponsor(where: { slug: $slug }) {
+query Sponsor($slug: String!, $stage: Stage! = PUBLISHED) {
+  sponsor(where: { slug: $slug }, stage: $stage) {
     __typename
     slug
     name

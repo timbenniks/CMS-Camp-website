@@ -1,5 +1,5 @@
-query Footer {
-  footer(where: { id: "clutp8sbo627g08w5jh00fyl9" }) {
+query Footer($stage: Stage! = PUBLISHED) {
+  footer(where: { id: "clutp8sbo627g08w5jh00fyl9" }, stage: $stage) {
     sponsorsTitle
     organizersTitle
     organizers {

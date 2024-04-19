@@ -1,18 +1,24 @@
 <script lang="ts" setup>
-const { navigation } = await GqlNavigation();
+const { $preview } = useNuxtApp();
+const stage = $preview ? "DRAFT" : "PUBLISHED";
+const { navigation } = await GqlNavigation({ stage });
 
 const navigationItems = computed(() => {
   return navigation?.navigationItem;
 });
 
 function getUrl(item: any) {
+  if (!item) {
+    return false;
+  }
+
   if (item.externalLink) {
     return item.externalLink;
   } else {
     if (item.page && item.page.slug === "home") {
       return "/";
     } else {
-      return item.page.slug;
+      return item.page?.slug || "";
     }
   }
 }
@@ -25,6 +31,7 @@ function getUrl(item: any) {
     <ul v-if="navigationItems" class="flex items-center">
       <li v-for="item in navigationItems" :key="item.id">
         <nuxt-link
+          v-if="item?.page || item?.externalLink"
           :to="getUrl(item)"
           :target="item.externalLink ? '_blank' : '_self'"
           class="font-bold text-xl leading-7 tracking-wide"

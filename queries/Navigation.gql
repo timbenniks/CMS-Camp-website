@@ -1,5 +1,5 @@
-query Navigation {
-  navigation(where: { id: "cluqwbip82dc707w2m14gg677" }) {
+query Navigation($stage: Stage! = PUBLISHED) {
+  navigation(where: { id: "cluqwbip82dc707w2m14gg677" }, stage: $stage) {
     title
     navigationItem {
       id

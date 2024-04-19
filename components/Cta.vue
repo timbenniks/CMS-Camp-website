@@ -2,12 +2,13 @@
 const props = defineProps(["cta"]);
 
 const to = computed(() => {
-  return props.cta.externalUrl || props.cta.linkedPage.slug;
+  return props.cta?.externalUrl || props.cta?.linkedPage?.slug || false;
 });
 </script>
 
 <template>
   <nuxt-link
+    v-if="to"
     :class="`${cta.style || ''} ${cta.socialMediaIcon ? 'cta-icon' : 'cta'} `"
     :to="to"
   >

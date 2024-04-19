@@ -34,10 +34,13 @@ defineProps([
         <div
           class="flex justify-start mt-4 flex-col sm:flex-row space-y-2 sm:space-x-4 sm:space-y-0"
         >
-          <nuxt-link :to="masterclass.url" class="cta small"
+          <nuxt-link
+            v-if="masterclass?.url"
+            :to="masterclass.url"
+            class="cta small"
             >Masterclass</nuxt-link
           >
-          <nuxt-link :to="`/sponsor/${slug}`" class="cta small"
+          <nuxt-link v-if="slug" :to="`/sponsor/${slug}`" class="cta small"
             >More about</nuxt-link
           >
         </div>
@@ -60,7 +63,7 @@ defineProps([
           {{ name }}
         </h3>
         <p>
-          <nuxt-link :to="`/sponsor/${slug}`" class="cta small"
+          <nuxt-link v-if="slug" :to="`/sponsor/${slug}`" class="cta small"
             >More about</nuxt-link
           >
         </p>
