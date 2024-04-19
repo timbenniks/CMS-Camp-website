@@ -20,10 +20,9 @@ defineProps([
         provider="hygraph"
         :src="logo.url"
         :width="470"
-        :height="200"
         sizes="sm:220px md:500px md:700px"
         :alt="name || ''"
-        class="max-w-[300px] lg:max-w-[600px] mx-auto"
+        class="max-w-[300px] lg:max-w-[600px] mx-auto object-contain"
       />
       <article class="lg:px-32">
         <h3 class="text-yellow-500 font-bold text-5xl mb-2" v-if="name">
@@ -52,11 +51,9 @@ defineProps([
         provider="hygraph"
         :src="logo.url"
         :width="470"
-        :height="200"
         sizes="sm:220px md:500px md:700px"
         :alt="name || ''"
-        class="max-w-[470px] mx-auto"
-        fit="crop"
+        class="max-w-[470px] mx-auto object-contain"
       />
       <article class="lg:px-32">
         <h3 class="text-neutral-400 font-bold text-3xl mb-6" v-if="name">
@@ -78,11 +75,9 @@ defineProps([
           provider="hygraph"
           :src="logo.url"
           :width="470"
-          :height="245"
           sizes="sm:220px md:500px md:700px"
           :alt="name || ''"
-          class="max-w-[470px] mx-auto"
-          fit="crop"
+          class="max-w-[470px] mx-auto object-contain"
         />
       </nuxt-link>
     </div>

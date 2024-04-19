@@ -13,6 +13,9 @@ query Footer {
       logo {
         ...ImageFields
       }
+      alternativeLogo {
+        ...ImageFields
+      }
       url
     }
   }
