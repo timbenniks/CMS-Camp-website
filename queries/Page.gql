@@ -39,6 +39,9 @@ query Page($slug: String!) {
       ... on TextMedia {
         ...TextMediaFields
       }
+      ... on SupporterList {
+        ...SupporterListFields
+      }
     }
   }
 }

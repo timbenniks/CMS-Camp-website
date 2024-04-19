@@ -40,6 +40,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 # TODO
 
+- responsive nav
 - Session form flow
   - create asset
   - create speaker

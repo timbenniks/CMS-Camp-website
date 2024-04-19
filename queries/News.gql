@@ -35,6 +35,9 @@ query News($slug: String!) {
       ... on TextMedia {
         ...TextMediaFields
       }
+      ... on SupporterList {
+        ...SupporterListFields
+      }
     }
   }
 }

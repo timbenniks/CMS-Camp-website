@@ -196,3 +196,12 @@ fragment TextMediaFields on TextMedia {
     ...TextFields
   }
 }
+
+fragment SupporterListFields on SupporterList {
+  title
+  supporters {
+    id
+    name
+    link
+  }
+}

@@ -12,6 +12,7 @@ import NewsArticle from "@/components/NewsArticle.vue"
 import Speaker from "@/components/Speaker.vue"
 import Session from "@/components/Session.vue"
 import Image from "@/components/Image.vue"
+import SupporterList from "@/components/SupporterList.vue"
 
 type Mapping = {
   [name: string]: Component
@@ -29,7 +30,8 @@ export const mapping: Mapping = {
   NewsArticle,
   Speaker,
   Session,
-  Image
+  Image,
+  SupporterList
 };
 
 export function getComponentForName(name: string) {
