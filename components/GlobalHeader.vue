@@ -34,7 +34,8 @@ function toggle() {
     class="px-6 xl:px-0 h-[120px] md:h-[160]px flex justify-between py-10 items-center relative z-10"
   >
     <nuxt-link to="/" aria-label="Home" class="block w-[330px] h-[80px]">
-      <Logo />
+      <Logo class="hidden md:block" />
+      <LogoMobile class="md:hidden w-[108px] mt-2" />
     </nuxt-link>
 
     <div class="flex items-center">
@@ -43,13 +44,16 @@ function toggle() {
         class="absolute top-[120px] text-center lg:text-left left-0 w-full z-20 bg-white lg:static lg:w-auto lg:bg-none lg:flex"
         :class="open ? '' : ''"
       >
+        <li>
+          <LogoWords class="lg:hidden w-[215px] h-[36px] mx-auto mb-2" />
+        </li>
         <li v-for="item in navigationItems" :key="item.id" class="py-3 lg:py-0">
           <nuxt-link
             v-if="item?.page || item?.externalLink"
             :to="getUrl(item)"
             :target="item.externalLink ? '_blank' : '_self'"
             class="font-bold text-xl leading-7 tracking-wide"
-            :class="item.highlighted ? 'cta' : 'mr-10'"
+            :class="item.highlighted ? 'cta' : 'lg:mr-10'"
           >
             {{ item.label }}
           </nuxt-link>
@@ -64,7 +68,7 @@ function toggle() {
       </nuxt-link>
 
       <button
-        class="ml-12 nav-toggle relative w-16 h-[50px] bg-white lg:hidden transform transition duration-500 ease-in-out"
+        class="ml-8 nav-toggle relative w-16 h-[50px] bg-white lg:hidden transform transition duration-500 ease-in-out"
         :class="open ? 'open' : ''"
         @click="toggle()"
       >
