@@ -42,7 +42,7 @@ function toggle() {
       <ul
         v-if="navigationItems"
         class="absolute top-[120px] text-center lg:text-left left-0 w-full z-20 bg-white lg:static lg:w-auto lg:bg-none lg:flex"
-        :class="open ? '' : ''"
+        :class="{ hidden: open }"
       >
         <li>
           <LogoWords class="lg:hidden w-[215px] h-[36px] mx-auto mb-2" />
