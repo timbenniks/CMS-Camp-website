@@ -15,6 +15,7 @@ defineProps(["name", "url", "description", "image"]);
         :alt="name || ''"
         class="mb-4"
         fit="crop"
+        loading="lazy"
       />
     </nuxt-link>
     <p class="font-bold text-xl mb-4" v-if="name">{{ name }}</p>

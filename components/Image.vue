@@ -16,10 +16,12 @@ defineProps(["title", "image", "ctAs"]);
       provider="hygraph"
       :src="image.url"
       class="object-fit block w-full"
-      width="712"
+      :width="image.width"
+      :height="image.height"
       sizes="sm:220px md:500px lg:700px xl:1440"
       :alt="title || ''"
       fit="max"
+      loading="lazy"
     />
 
     <div

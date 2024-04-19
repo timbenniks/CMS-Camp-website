@@ -81,6 +81,7 @@ defineProps([
           sizes="sm:220px md:500px md:700px"
           :alt="name || ''"
           class="max-w-[470px] mx-auto object-contain"
+          loading="lazy"
         />
       </nuxt-link>
     </div>

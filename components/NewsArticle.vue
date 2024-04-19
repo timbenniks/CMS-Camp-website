@@ -21,6 +21,7 @@ const props = defineProps([
       :alt="title || ''"
       class="lg:max-w-[469px] mb-8 lg:mb-0"
       fit="crop"
+      loading="lazy"
     />
     <article class="flex flex-col justify-center">
       <h3 class="font-bold text-5xl mb-2" v-if="title">

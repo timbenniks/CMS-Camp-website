@@ -15,6 +15,7 @@ defineProps(["id", "title", "theme", "sessionTheme", "speaker"]);
         :alt="speaker.name || ''"
         class="mb-2 max-w-24"
         fit="crop"
+        loading="lazy"
       />
       <p v-if="speaker">{{ speaker.name }}</p>
     </div>

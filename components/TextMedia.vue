@@ -22,6 +22,7 @@ defineProps(["title", "mediaFirst", "media", "text", "ctas"]);
         fit="crop"
         :quality="90"
         class="md:w-2/4 mb-10 md:mb-0"
+        loading="lazy"
       />
     </div>
   </div>
