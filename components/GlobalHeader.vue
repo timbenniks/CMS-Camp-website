@@ -55,8 +55,12 @@ function toggle() {
           </nuxt-link>
         </li>
       </ul>
-      <nuxt-link class="cta" :to="navigation?.ticketsUrl">
-        {{ navigation.ticketsLabel }}
+      <nuxt-link
+        class="cta"
+        v-if="navigation?.ticketsUrl"
+        :to="navigation?.ticketsUrl"
+      >
+        {{ navigation?.ticketsLabel }}
       </nuxt-link>
 
       <button
