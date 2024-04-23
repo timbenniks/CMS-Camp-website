@@ -1,4 +1,8 @@
 export default defineNuxtConfig({
+  routeRules: {
+    '/**': { isr: 3600 },
+  },
+
   devtools: { enabled: true },
   modules: [
     "@nuxtjs/tailwindcss",

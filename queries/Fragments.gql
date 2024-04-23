@@ -205,3 +205,17 @@ fragment SupporterListFields on SupporterList {
     link
   }
 }
+
+fragment SessionFormFields on SessionForm {
+  id
+  submitLabel
+  title
+  fields {
+    id
+    label
+    required
+    name
+    placeholder
+    sessionTypeSelector
+  }
+}

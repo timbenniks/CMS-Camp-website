@@ -37,6 +37,9 @@ query Sponsor($slug: String!, $stage: Stage! = PUBLISHED) {
       ... on SupporterList {
         ...SupporterListFields
       }
+      ... on SessionForm {
+        ...SessionFormFields
+      }
     }
   }
 }

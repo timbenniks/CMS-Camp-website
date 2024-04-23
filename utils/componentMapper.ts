@@ -13,6 +13,7 @@ import Speaker from "@/components/Speaker.vue"
 import Session from "@/components/Session.vue"
 import Image from "@/components/Image.vue"
 import SupporterList from "@/components/SupporterList.vue"
+import SessionForm from "@/components/SessionForm.vue"
 
 type Mapping = {
   [name: string]: Component
@@ -31,7 +32,8 @@ export const mapping: Mapping = {
   Speaker,
   Session,
   Image,
-  SupporterList
+  SupporterList,
+  SessionForm
 };
 
 export function getComponentForName(name: string) {

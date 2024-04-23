@@ -1,0 +1,9 @@
+query SessionThemes {
+  sessionThemes {
+    id
+    theme
+    color {
+      hex
+    }
+  }
+}
