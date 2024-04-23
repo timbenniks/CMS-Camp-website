@@ -34,7 +34,7 @@ async function formSubmit() {
 
   loading.value = false;
   if (response) {
-    result.value = "Thank you for sumbitting your session.";
+    result.value = "Thank you for submitting your session.";
   }
 }
 </script>
