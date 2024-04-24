@@ -12,6 +12,8 @@
   "dependencies": {
     "@nuxt/fonts": "^0.6.1",
     "@nuxt/image": "^1.5.0",
+    "@nuxtjs/robots": "^3.0.0",
+    "@nuxtjs/sitemap": "^5.1.4",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@tailwindcss/typography": "^0.5.12",
     "graphql-request": "^6.1.0",

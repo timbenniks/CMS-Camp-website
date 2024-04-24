@@ -46,6 +46,31 @@ useJsonld({
 </script>
 <template>
   <div class="mx-auto max-w-[1440px]">
+    <head>
+      <Link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <Link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <Link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <Link rel="manifest" href="/site.webmanifest" />
+      <Link rel="mask-icon" href="/safari-pinned-tab.svg" color="#003a3e" />
+      <Meta name="apple-mobile-web-app-title" content="CMS Camp" />
+      <Meta name="application-name" content="CMS Camp" />
+      <Meta name="msapplication-TileColor" content="#ffffff" />
+      <Meta name="theme-color" content="#ffffff" />
+    </head>
     <GlobalHeader />
     <main>
       <NuxtPage />

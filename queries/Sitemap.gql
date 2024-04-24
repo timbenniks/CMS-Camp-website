@@ -1,0 +1,16 @@
+query Sitemap {
+  pages {
+    slug
+    updatedAt
+  }
+
+  newsArticles {
+    slug
+    updatedAt
+  }
+
+  sponsors {
+    slug
+    updatedAt
+  }
+}

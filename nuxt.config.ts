@@ -10,6 +10,8 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "nuxt-graphql-client",
     "nuxt-jsonld",
+    "@nuxtjs/robots",
+    "@nuxtjs/sitemap"
   ],
 
   runtimeConfig: {
@@ -33,5 +35,13 @@ export default defineNuxtConfig({
     families: [{
       name: 'Poppins', provider: 'google', weights: [100, 400, 700]
     }]
-  }
+  },
+
+  site: {
+    url: 'https://mallorca.cmscamp.eu/',
+  },
+
+  sitemap: {
+    sources: ['/api/sitemap'],
+  },
 })
