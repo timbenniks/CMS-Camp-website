@@ -10,7 +10,7 @@ defineProps([
 
 <template>
   <article
-    class="mb-20 bg-cover text-center p-8 sm:p-20 mx-6 2xl:mx-0"
+    class="mb-10 bg-cover text-center p-8 sm:p-20 mx-6 2xl:mx-0"
     :class="
       noBackground
         ? 'text-primary border border-primary'

@@ -10,7 +10,7 @@ defineProps([
 </script>
 
 <template>
-  <article class="mb-20 px-6 2xl:px-0 mx-auto max-w-screen-md">
+  <article class="mb-10 px-6 2xl:px-0 mx-auto max-w-screen-md">
     <h2
       :is="titleType || 'h2'"
       v-if="title"

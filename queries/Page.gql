@@ -45,6 +45,9 @@ query Page($slug: String!, $stage: Stage! = PUBLISHED) {
       ... on SessionForm {
         ...SessionFormFields
       }
+      ... on Callout {
+        ...CalloutFields
+      }
     }
   }
 }

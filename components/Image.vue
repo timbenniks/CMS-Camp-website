@@ -3,7 +3,7 @@ defineProps(["title", "image", "ctAs"]);
 </script>
 
 <template>
-  <div class="mb-20 px-6 2xl:px-0">
+  <div class="mb-10 px-6 2xl:px-0">
     <h3
       v-if="title"
       class="max-w-screen-md mx-auto text-center text-primary text-3xl font-light uppercase leading-[56px] tracking-wider mb-10"

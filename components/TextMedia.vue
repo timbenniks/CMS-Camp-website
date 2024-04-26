@@ -3,7 +3,7 @@ defineProps(["title", "mediaFirst", "media", "text", "ctas"]);
 </script>
 
 <template>
-  <div class="mb-20 px-6 2xl:px-0 overflow-hidden">
+  <div class="mb-10 px-6 2xl:px-0 overflow-hidden">
     <div
       class="flex items-center flex-col md:flex-row"
       :class="{ 'md:flex-row-reverse flex-col-reverse': mediaFirst }"

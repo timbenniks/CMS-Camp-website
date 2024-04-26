@@ -40,7 +40,7 @@ async function formSubmit() {
 </script>
 
 <template>
-  <div class="mb-20 p-12 mx-auto border border-primary max-w-screen-lg">
+  <div class="mb-10 p-12 mx-auto border border-primary max-w-screen-lg">
     <h3 v-if="title" class="text-3xl font-bold mb-12">
       {{ title }}
     </h3>

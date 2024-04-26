@@ -35,6 +35,7 @@ fragment HeroFields on Hero {
   id
   headline
   description
+  small
   backgroundImage {
     ...ImageFields
     image: url(
@@ -217,5 +218,12 @@ fragment SessionFormFields on SessionForm {
     name
     placeholder
     sessionTypeSelector
+  }
+}
+
+fragment CalloutFields on Callout {
+  id
+  ctas {
+    ...CTAfields
   }
 }

@@ -10,7 +10,7 @@ const { footer } = await GqlFooter();
       <li
         v-for="sponsor in footer?.sponsors"
         :key="sponsor.id"
-        class="flex justify-center"
+        class="flex justify-center mb-4 md:mx-4"
       >
         <NuxtImg
           v-if="sponsor.alternativeLogo"
@@ -29,7 +29,7 @@ const { footer } = await GqlFooter();
       <li
         v-for="organizer in footer?.organizers"
         :key="organizer.id"
-        class="flex justify-center"
+        class="flex justify-center mb-4 md:mx-4"
       >
         <NuxtImg
           v-if="organizer.logo"

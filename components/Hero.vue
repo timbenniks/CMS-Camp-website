@@ -12,7 +12,7 @@ const props = defineProps([
 <template>
   <div
     :style="`background-image: url(${props.backgroundImage.image})`"
-    class="mb-20 text-light relative overflow-hidden md:aspect-[1440/732] bg-cover"
+    class="mb-10 text-light relative overflow-hidden md:aspect-[1440/732] bg-cover"
     :class="logoImage ? 'aspect-[390/240]' : 'aspect-[390/673]'"
   >
     <div

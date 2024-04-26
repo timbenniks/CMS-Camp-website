@@ -41,3 +41,17 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 # TODO
 
 - recaptcha
+
+- Items per row design for sponsors. Do not look at status
+- Eventbrite API for support tickets only: https://www.eventbrite.de/e/cms-camp-mallorca-tickets-594431820577
+- Highlight active link in navigation
+- Small hero variation
+- Callout component
+- Tabs below eachother on mobile
+- Images don't always render
+- Preview not working
+
+Feature
+
+- Hidden content for later publication
+-

@@ -4,7 +4,7 @@ defineProps(["title", "supporters"]);
 
 <template>
   <article
-    class="mb-20 bg-cover text-center p-8 sm:p-20 mx-6 2xl:mx-0 bg-[url(/banner.jpg)] text-light"
+    class="mb-10 bg-cover text-center p-8 sm:p-20 mx-6 2xl:mx-0 bg-[url(/banner.jpg)] text-light"
   >
     <h3 v-if="title" class="text-3xl md:text-5xl font-bold mb-6 uppercase">
       {{ title }}

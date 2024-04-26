@@ -10,7 +10,7 @@ const props = defineProps([
 </script>
 
 <template>
-  <div class="grid grid-cols-1 lg:grid-cols-2 mb-20">
+  <div class="grid grid-cols-1 lg:grid-cols-2 mb-10">
     <NuxtImg
       v-if="image"
       provider="hygraph"

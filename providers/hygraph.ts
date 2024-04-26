@@ -24,7 +24,7 @@ export function optimizeHygraphImage(baseURL: string, url: string, optimizations
   const imageId = url.split(`${baseURL}/`)[1];
   const imageFormat = getImageFormat(optimizations.format)
   const optimBase = 'resize'
-  const quality = optimizations.quality ? `quality=value:${optimizations.quality}/compress=metadata:true/` : ''
+  const quality = optimizations.quality ? `quality=value:${optimizations.quality}/` : ''
 
   let optimList = [];
   for (const [key, value] of Object.entries(optimizations)) {

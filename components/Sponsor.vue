@@ -14,7 +14,7 @@ defineProps([
 
 <template>
   <template v-if="sponsorStatus === 'gold'">
-    <div class="grid grid-cols-1 lg:grid-cols-2 mb-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 mb-10">
       <NuxtImg
         v-if="logo"
         provider="hygraph"
@@ -40,7 +40,7 @@ defineProps([
             class="cta small"
             >Masterclass</nuxt-link
           >
-          <nuxt-link v-if="slug" :to="`/sponsor/${slug}`" class="cta small"
+          <nuxt-link v-if="url" :to="url" target="_blank" class="cta small"
             >More about</nuxt-link
           >
         </div>
@@ -48,7 +48,7 @@ defineProps([
     </div>
   </template>
   <template v-if="sponsorStatus === 'silver'">
-    <div class="mb-20 text-center">
+    <div class="mb-10 text-center">
       <NuxtImg
         v-if="logo"
         provider="hygraph"
@@ -63,7 +63,7 @@ defineProps([
           {{ name }}
         </h3>
         <p>
-          <nuxt-link v-if="slug" :to="`/sponsor/${slug}`" class="cta small"
+          <nuxt-link v-if="url" :to="url" target="_blank" class="cta small"
             >More about</nuxt-link
           >
         </p>
@@ -71,7 +71,7 @@ defineProps([
     </div>
   </template>
   <template v-if="sponsorStatus === 'bronze'">
-    <div class="mb-20 px-20">
+    <div class="mb-10 px-20">
       <nuxt-link :to="url">
         <NuxtImg
           v-if="logo"

@@ -60,6 +60,7 @@ function toggle() {
         </li>
       </ul>
       <nuxt-link
+        target="_blank"
         class="cta"
         v-if="navigation?.ticketsUrl"
         :to="navigation?.ticketsUrl"

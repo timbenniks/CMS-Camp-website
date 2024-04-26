@@ -23,7 +23,7 @@ const cols = computed(() => {
 </script>
 
 <template>
-  <div class="mb-20 mx-6 2xl:mx-0">
+  <div class="mb-10 mx-6 2xl:mx-0">
     <h3
       v-if="title"
       class="max-w-screen-md mx-auto text-center text-primary text-3xl font-light uppercase leading-[56px] tracking-wider mb-10"
@@ -36,6 +36,7 @@ const cols = computed(() => {
         :is="getComponentForName(component?.__typename)"
         :key="(component?.id as string)"
         v-bind="component"
+        :items-per-row="itemsPerRow"
       />
     </div>
   </div>

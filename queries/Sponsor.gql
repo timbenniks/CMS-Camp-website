@@ -11,35 +11,5 @@ query Sponsor($slug: String!, $stage: Stage! = PUBLISHED) {
     masterclass {
       slug
     }
-    components {
-      __typename
-      ... on Banner {
-        ...BannerFields
-      }
-      ... on Hero {
-        ...HeroFields
-      }
-      ... on Image {
-        ...ImageComponentFields
-      }
-      ... on ImageGallary {
-        ...ImageGalleryFields
-      }
-      ... on List {
-        ...ListFields
-      }
-      ... on Text {
-        ...TextFields
-      }
-      ... on TextMedia {
-        ...TextMediaFields
-      }
-      ... on SupporterList {
-        ...SupporterListFields
-      }
-      ... on SessionForm {
-        ...SessionFormFields
-      }
-    }
   }
 }
