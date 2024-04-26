@@ -54,4 +54,3 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 Feature
 
 - Hidden content for later publication
--
