@@ -14,7 +14,7 @@ defineProps([
     <h2
       :is="titleType || 'h2'"
       v-if="title"
-      class="text-3xl md:text-5xl font-bold mb-2"
+      class="text-3xl md:text-4xl font-bold mb-2"
     >
       {{ title }}
     </h2>
