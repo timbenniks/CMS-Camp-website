@@ -106,7 +106,7 @@ function toggle() {
   transform: rotate(-45deg) translateY(0px);
 }
 
-.navigation a.active {
-  text-decoration: underline;
+a.router-link-active.router-link-exact-active {
+  @apply !text-secondary !underline;
 }
 </style>

@@ -6,14 +6,20 @@ const props = defineProps([
   "backgroundImageDarkness",
   "logoImage",
   "ctas",
+  "small",
 ]);
 </script>
 
 <template>
   <div
     :style="`background-image: url(${props.backgroundImage.image})`"
-    class="mb-10 text-light relative overflow-hidden md:aspect-[1440/732] bg-cover"
-    :class="logoImage ? 'aspect-[390/240]' : 'aspect-[390/673]'"
+    class="mb-10 text-light relative overflow-hidden bg-cover"
+    :class="{
+      'aspect-[390/240]': logoImage,
+      'aspect-[390/673]': !logoImage,
+      'md:aspect-[1440/350]': small,
+      'md:aspect-[1440/732]': !small,
+    }"
   >
     <div
       class="bg-black absolute top-0 left-0 w-full h-full"
@@ -24,7 +30,8 @@ const props = defineProps([
       v-if="logoImage"
       provider="hygraph"
       :src="logoImage.url"
-      class="absolute w-2/3 h-auto top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
+      class="absolute h-auto top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
+      :class="small ? 'w-2/3 md:w-1/3' : 'w-2/3'"
       width="712"
       height="175"
       sizes="sm:220px md:500px lg:700px"

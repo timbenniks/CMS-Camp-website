@@ -32,7 +32,7 @@ defineProps(["title", "schedules"]);
 
 <style lang="postcss">
 .tabs-component-tabs {
-  @apply flex space-x-2 mb-8;
+  @apply flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-2 mb-8;
 }
 
 .tabs-component-tab-a {
