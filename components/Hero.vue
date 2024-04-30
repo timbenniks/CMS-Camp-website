@@ -49,7 +49,7 @@ const bgImage = computed(() => {
       height="175"
       sizes="sm:220px md:500px lg:700px"
       :alt="headline || 'Hero'"
-      fit="crop"
+      fit="fit"
     />
 
     <div

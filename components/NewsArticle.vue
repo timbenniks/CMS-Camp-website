@@ -19,12 +19,12 @@ const provider = computed(() => {
       v-if="image"
       :provider="provider"
       :src="image.url"
-      :width="500"
-      :height="500"
+      :width="image.width"
+      :height="image.height"
       sizes="sm:220px md:500px md:700px"
       :alt="title || ''"
       class="lg:max-w-[469px] mb-8 lg:mb-0"
-      fit="crop"
+      fit="fit"
       loading="lazy"
     />
     <article class="flex flex-col justify-center">

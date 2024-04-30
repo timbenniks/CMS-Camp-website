@@ -20,11 +20,10 @@ const provider = computed(() => {
         v-if="media"
         :provider="provider"
         :src="media.url"
-        :width="712"
-        :height="712"
+        :width="media.width"
+        :height="media.height"
         sizes="sm:220px md:500px md:700px"
         :alt="title || ''"
-        fit="fit"
         class="md:w-2/4 mb-10 md:mb-0"
         loading="lazy"
       />
