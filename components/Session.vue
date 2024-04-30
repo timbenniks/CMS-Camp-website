@@ -8,7 +8,7 @@ const provider = computed(() => {
 </script>
 
 <template>
-  <div class="mb-10 flex flex-col md:flex-row bg-zinc-100 p-4">
+  <div class="flex flex-col md:flex-row bg-zinc-100 p-4">
     <div class="md:w-1/3">
       <NuxtImg
         v-if="speaker.image"
