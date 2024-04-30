@@ -16,7 +16,9 @@ const provider = computed(() => {
 
 const bgImage = computed(() => {
   return imageProvider === "cloudinary"
-    ? `${cloudinaryBaseUrl}q_auto,f_auto/w_1440,h_1000,c_fit/${props.backgroundImage.url}`
+    ? `${cloudinaryBaseUrl}q_auto,f_auto/${
+        props.small ? "w_1440,h_350" : "w_1440,h_732"
+      },c_crop,g_auto/${props.backgroundImage.url}`
     : `${props.backgroundImage.image}`;
 });
 </script>

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 const page = await useGetContentForType({ slug: "home", type: "Page" });
 
-const { $preview } = useNuxtApp();
+const { enabled } = usePreviewMode();
 
 useSeoMeta({
-  title: `${$preview ? "⚡️ " : ""} ${page?.openGraphTitle}`,
+  title: `${enabled ? "⚡️ " : ""} ${page?.openGraphTitle}`,
   ogTitle: page?.openGraphTitle,
   description: page?.openGraphDescription,
   ogDescription: page?.openGraphDescription,

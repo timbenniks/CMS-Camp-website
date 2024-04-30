@@ -24,7 +24,7 @@ const provider = computed(() => {
         :height="712"
         sizes="sm:220px md:500px md:700px"
         :alt="title || ''"
-        fit="crop"
+        fit="fit"
         class="md:w-2/4 mb-10 md:mb-0"
         loading="lazy"
       />

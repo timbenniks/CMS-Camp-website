@@ -71,6 +71,7 @@ useJsonld({
       <Meta name="msapplication-TileColor" content="#ffffff" />
       <Meta name="theme-color" content="#ffffff" />
     </head>
+    <PreviewMode />
     <GlobalHeader />
     <main>
       <NuxtPage />
