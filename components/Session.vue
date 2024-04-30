@@ -19,7 +19,7 @@ const provider = computed(() => {
         sizes="sm:220px"
         :alt="speaker.name || ''"
         class="mb-2 max-w-24"
-        fit="crop"
+        fit="thumbnail"
         loading="lazy"
       />
       <p v-if="speaker">{{ speaker.name }}</p>
