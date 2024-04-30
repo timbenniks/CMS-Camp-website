@@ -1,5 +1,10 @@
 <script setup lang="ts">
 defineProps(["title", "image", "ctAs"]);
+
+const { imageProvider } = useRuntimeConfig().public;
+const provider = computed(() => {
+  return imageProvider === "hygraph" ? "hygraph" : "cloudinary";
+});
 </script>
 
 <template>
@@ -13,14 +18,13 @@ defineProps(["title", "image", "ctAs"]);
 
     <NuxtImg
       v-if="image"
-      provider="hygraph"
+      :provider="provider"
       :src="image.url"
       class="object-fit block w-full"
       :width="image.width"
       :height="image.height"
       sizes="sm:220px md:500px lg:700px xl:1440"
       :alt="title || ''"
-      fit="max"
       loading="lazy"
     />
 

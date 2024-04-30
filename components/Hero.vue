@@ -8,11 +8,22 @@ const props = defineProps([
   "ctas",
   "small",
 ]);
+
+const { imageProvider, cloudinaryBaseUrl } = useRuntimeConfig().public;
+const provider = computed(() => {
+  return imageProvider === "hygraph" ? "hygraph" : "cloudinary";
+});
+
+const bgImage = computed(() => {
+  return imageProvider === "cloudinary"
+    ? `${cloudinaryBaseUrl}q_auto,f_auto/w_1440,h_1000,c_fit/${props.backgroundImage.url}`
+    : `${props.backgroundImage.image}`;
+});
 </script>
 
 <template>
   <div
-    :style="`background-image: url(${props.backgroundImage.image})`"
+    :style="`background-image: url(${bgImage})`"
     class="mb-10 text-light relative overflow-hidden bg-cover"
     :class="{
       'aspect-[390/240]': logoImage,
@@ -28,7 +39,7 @@ const props = defineProps([
 
     <NuxtImg
       v-if="logoImage"
-      provider="hygraph"
+      :provider="provider"
       :src="logoImage.url"
       class="absolute h-auto top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
       :class="small ? 'w-2/3 md:w-1/3' : 'w-2/3'"

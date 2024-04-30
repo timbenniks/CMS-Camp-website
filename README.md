@@ -42,7 +42,6 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 - Eventbrite API for support tickets only: https://www.eventbrite.de/e/cms-camp-mallorca-tickets-594431820577
 - Images don't always render
-- Preview not working
 - recaptcha
 
 Feature requests

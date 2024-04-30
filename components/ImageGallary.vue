@@ -12,6 +12,11 @@ const breakpoints = ref({
     itemsToShow: 2,
   },
 });
+
+const { imageProvider } = useRuntimeConfig().public;
+const provider = computed(() => {
+  return imageProvider === "hygraph" ? "hygraph" : "cloudinary";
+});
 </script>
 
 <template>
@@ -30,14 +35,13 @@ const breakpoints = ref({
       >
         <slide v-for="image in images" :key="image.fileName">
           <NuxtImg
-            provider="hygraph"
+            :provider="provider"
             :src="image.url"
             :width="712"
             :height="712"
             sizes="sm:220px md:500px md:700px"
             alt=""
             fit="crop"
-            :quality="90"
           />
         </slide>
 

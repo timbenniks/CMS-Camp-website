@@ -6,16 +6,24 @@ defineProps([
   "primaryCtas",
   "secondaryCtas",
 ]);
+
+const { imageProvider, cloudinaryBaseUrl } = useRuntimeConfig().public;
+
+const bannerImage = computed(() => {
+  return imageProvider === "cloudinary"
+    ? `${cloudinaryBaseUrl.replace(
+        "fetch",
+        "upload"
+      )}q_auto,f_auto/banner_z3itho`
+    : "/banner.jpg";
+});
 </script>
 
 <template>
   <article
     class="mb-10 bg-cover text-center p-8 sm:p-20 mx-6 2xl:mx-0"
-    :class="
-      noBackground
-        ? 'text-primary border border-primary'
-        : 'bg-[url(/banner.jpg)] text-light'
-    "
+    :style="!noBackground ? `background: url(${bannerImage})` : ''"
+    :class="noBackground ? 'text-primary border border-primary' : 'text-light'"
   >
     <h3 v-if="title" class="text-3xl md:text-5xl font-bold mb-2">
       {{ title }}

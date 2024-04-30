@@ -17,9 +17,16 @@ export default defineNuxtConfig({
   runtimeConfig: {
     hygraphToken: process.env.HYGRAPH_TOKEN,
     hygraphEndpoint: process.env.GQL_HOST,
+    public: {
+      imageProvider: process.env.IMAGE_PROVIDER,
+      cloudinaryBaseUrl: process.env.CLOUDINARY_BASE_URL
+    }
   },
 
   image: {
+    cloudinary: {
+      baseURL: process.env.CLOUDINARY_BASE_URL,
+    },
     providers: {
       hygraph: {
         name: 'hygraph',

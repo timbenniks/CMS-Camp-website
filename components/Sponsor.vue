@@ -11,6 +11,11 @@ defineProps([
   "masterclass",
   "itemsPerRow",
 ]);
+
+const { imageProvider } = useRuntimeConfig().public;
+const provider = computed(() => {
+  return imageProvider === "hygraph" ? "hygraph" : "cloudinary";
+});
 </script>
 
 <template>
@@ -18,7 +23,7 @@ defineProps([
     <div class="grid grid-cols-1 lg:grid-cols-2 mb-10">
       <NuxtImg
         v-if="logo"
-        provider="hygraph"
+        :provider="provider"
         :src="logo.url"
         :width="470"
         sizes="sm:220px md:500px md:700px"
@@ -57,7 +62,7 @@ defineProps([
     <div class="mb-10 text-center">
       <NuxtImg
         v-if="logo"
-        provider="hygraph"
+        :provider="provider"
         :src="logo.url"
         :width="470"
         sizes="sm:220px md:500px md:700px"
@@ -81,7 +86,7 @@ defineProps([
       <nuxt-link :to="url" v-if="url">
         <NuxtImg
           v-if="logo"
-          provider="hygraph"
+          :provider="provider"
           :src="logo.url"
           :width="470"
           sizes="sm:220px md:500px md:700px"

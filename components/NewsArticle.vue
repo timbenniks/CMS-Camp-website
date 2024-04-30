@@ -7,13 +7,17 @@ const props = defineProps([
   "description",
   "image",
 ]);
+const { imageProvider } = useRuntimeConfig().public;
+const provider = computed(() => {
+  return imageProvider === "hygraph" ? "hygraph" : "cloudinary";
+});
 </script>
 
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-2 mb-10">
     <NuxtImg
       v-if="image"
-      provider="hygraph"
+      :provider="provider"
       :src="image.url"
       :width="500"
       :height="500"

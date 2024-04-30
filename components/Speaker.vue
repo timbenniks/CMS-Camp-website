@@ -1,5 +1,10 @@
 <script setup lang="ts">
 defineProps(["name", "url", "description", "image"]);
+
+const { imageProvider } = useRuntimeConfig().public;
+const provider = computed(() => {
+  return imageProvider === "hygraph" ? "hygraph" : "cloudinary";
+});
 </script>
 
 <template>
@@ -7,7 +12,7 @@ defineProps(["name", "url", "description", "image"]);
     <nuxt-link :to="url">
       <NuxtImg
         v-if="image"
-        provider="hygraph"
+        :provider="provider"
         :src="image.url"
         :width="469"
         :height="469"
