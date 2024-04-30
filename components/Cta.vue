@@ -11,6 +11,8 @@ const to = computed(() => {
     v-if="to"
     :class="`${cta.style || ''} ${cta.socialMediaIcon ? 'cta-icon' : 'cta'} `"
     :to="to"
+    :name="`Follow us on ${cta.socialMediaIcon}`"
+    :aria-label="`Follow us on ${cta.socialMediaIcon}`"
   >
     <template v-if="cta.socialMediaIcon">
       <Twitter v-if="cta.socialMediaIcon === 'Twitter'" />

@@ -21,9 +21,11 @@ const provider = computed(() => {
           v-if="sponsor.alternativeLogo"
           :provider="provider"
           :src="sponsor.alternativeLogo.url"
-          :width="470"
-          sizes="sm:230px"
+          width="240"
+          height="90"
+          sizes="sm:240px"
           alt=""
+          fit="fit"
           class="w-60 object-contain"
         />
       </li>
@@ -40,9 +42,11 @@ const provider = computed(() => {
           v-if="organizer.logo"
           :provider="provider"
           :src="organizer.logo.url"
-          :width="120"
+          width="112"
+          height="34"
           sizes="sm:120px"
           alt=""
+          fit="fit"
           class="w-28 object-contain"
         />
       </li>

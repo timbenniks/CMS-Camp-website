@@ -36,10 +36,10 @@ defineProps(["title", "schedules"]);
 }
 
 .tabs-component-tab-a {
-  @apply opacity-50;
+  @apply bg-opacity-30 text-primary border-opacity-30;
 }
 
 .tabs-component-tab-a.is-active {
-  @apply opacity-100;
+  @apply bg-opacity-100 text-light;
 }
 </style>
