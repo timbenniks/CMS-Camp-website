@@ -15,6 +15,7 @@ import Image from "@/components/Image.vue"
 import SupporterList from "@/components/SupporterList.vue"
 import SessionForm from "@/components/SessionForm.vue"
 import Callout from "@/components/Callout.vue"
+import Newsletter from "@/components/Newsletter.vue"
 
 type Mapping = {
   [name: string]: Component
@@ -35,7 +36,8 @@ export const mapping: Mapping = {
   Image,
   SupporterList,
   SessionForm,
-  Callout
+  Callout,
+  Newsletter
 };
 
 export function getComponentForName(name: string) {

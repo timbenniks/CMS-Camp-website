@@ -41,6 +41,9 @@ export default defineNuxtConfig({
   fonts: {
     families: [{
       name: 'Poppins', provider: 'google', weights: [100, 400, 700]
+    },
+    {
+      name: 'Roboto', provider: 'google', weights: [400]
     }]
   },
 
