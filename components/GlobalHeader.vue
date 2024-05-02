@@ -34,7 +34,7 @@ function toggle() {
     class="px-6 xl:px-0 h-[120px] md:h-[160]px flex justify-between py-10 items-center relative z-10"
   >
     <nuxt-link to="/" aria-label="Home" class="block w-[330px] h-[80px]">
-      <Logo class="hidden md:block" />
+      <Logo class="hidden md:block w-[331px] h-[81px]" />
       <LogoMobile class="md:hidden w-[108px] mt-2" />
     </nuxt-link>
 
