@@ -46,7 +46,7 @@ useJsonld({
 </script>
 <template>
   <div class="mx-auto max-w-[1440px]">
-    <head>
+    <Head>
       <Link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -70,7 +70,7 @@ useJsonld({
       <Meta name="application-name" content="CMS Camp" />
       <Meta name="msapplication-TileColor" content="#ffffff" />
       <Meta name="theme-color" content="#ffffff" />
-    </head>
+    </Head>
     <PreviewMode />
     <GlobalHeader />
     <main>
@@ -79,8 +79,3 @@ useJsonld({
     <GlobalFooter />
   </div>
 </template>
-<style>
-:root {
-  font-family: Poppins;
-}
-</style>
