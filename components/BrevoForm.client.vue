@@ -29,7 +29,7 @@ useHead({
 </script>
 
 <template>
-  <div class="sib-form" style="text-align: center; background-color: #eff2f7">
+  <div class="sib-form" style="text-align: center">
     <div id="sib-form-container" class="sib-form-container">
       <div
         id="error-message"

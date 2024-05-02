@@ -17,17 +17,19 @@ const provider = computed(() => {
         :key="sponsor.id"
         class="flex justify-center mb-4 md:mx-4"
       >
-        <NuxtImg
-          v-if="sponsor.alternativeLogo"
-          :provider="provider"
-          :src="sponsor.alternativeLogo.url"
-          width="240"
-          height="90"
-          sizes="sm:240px"
-          alt=""
-          fit="fit"
-          class="w-60 object-contain"
-        />
+        <NuxtLink v-if="sponsor.url" :to="sponsor.url" target="_blank">
+          <NuxtImg
+            v-if="sponsor.alternativeLogo"
+            :provider="provider"
+            :src="sponsor.alternativeLogo.url"
+            width="240"
+            height="90"
+            sizes="sm:240px"
+            alt=""
+            fit="fit"
+            class="w-60 object-contain"
+          />
+        </NuxtLink>
       </li>
     </ul>
 
@@ -38,17 +40,19 @@ const provider = computed(() => {
         :key="organizer.id"
         class="flex justify-center mb-4 md:mx-4"
       >
-        <NuxtImg
-          v-if="organizer.logo"
-          :provider="provider"
-          :src="organizer.logo.url"
-          width="112"
-          height="34"
-          sizes="sm:120px"
-          alt=""
-          fit="fit"
-          class="w-28 object-contain"
-        />
+        <NuxtLink v-if="organizer.url" :to="organizer.url" target="_blank">
+          <NuxtImg
+            v-if="organizer.logo"
+            :provider="provider"
+            :src="organizer.logo.url"
+            width="112"
+            height="34"
+            sizes="sm:120px"
+            alt=""
+            fit="fit"
+            class="w-28 object-contain"
+          />
+        </NuxtLink>
       </li>
     </ul>
   </footer>

@@ -4,6 +4,7 @@ query Footer($stage: Stage! = PUBLISHED) {
     organizersTitle
     organizers {
       id
+      url
       logo {
         ...ImageFields
       }

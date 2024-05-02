@@ -15,6 +15,10 @@ const provider = computed(() => {
 });
 
 const bgImage = computed(() => {
+  if (!props.backgroundImage) {
+    return false;
+  }
+
   return imageProvider === "cloudinary"
     ? `${cloudinaryBaseUrl}q_auto,f_auto/${
         props.small ? "w_1440,h_350" : "w_1440,h_732"
@@ -25,7 +29,7 @@ const bgImage = computed(() => {
 
 <template>
   <div
-    :style="`background-image: url(${bgImage})`"
+    :style="bgImage ? `background-image: url(${bgImage})` : ''"
     class="mb-10 text-light relative overflow-hidden bg-cover"
     :class="{
       'aspect-[390/240]': logoImage,
@@ -54,11 +58,12 @@ const bgImage = computed(() => {
 
     <div
       v-else
-      class="p-6 sm:p-12 lg:max-w-screen-md absolute lg:w-2/3 lg:h-auto top-2/4 lg:left-32 -translate-y-2/4"
+      class="p-6 sm:p-12 lg:max-w-screen-lg absolute lg:w-2/3 lg:h-auto top-2/4 lg:left-32 -translate-y-2/4"
     >
       <h1
         v-if="headline"
-        class="text-4xl text-light lg:text-6xl mb-6 font-bold leading-none"
+        class="text-4xl text-light mb-6 font-bold leading-none"
+        :class="small ? 'lg:text-5xl' : 'lg:text-6xl'"
       >
         {{ headline }}
       </h1>

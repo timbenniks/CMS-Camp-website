@@ -13,6 +13,7 @@ const to = computed(() => {
     :to="to"
     :name="`Follow us on ${cta.socialMediaIcon}`"
     :aria-label="`Follow us on ${cta.socialMediaIcon}`"
+    :target="props.cta?.externalUrl ? '_blank' : '_self'"
   >
     <template v-if="cta.socialMediaIcon">
       <Twitter v-if="cta.socialMediaIcon === 'Twitter'" />
