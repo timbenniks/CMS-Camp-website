@@ -17,7 +17,13 @@ const provider = computed(() => {
         :key="sponsor.id"
         class="flex justify-center mb-4 md:mx-4"
       >
-        <NuxtLink v-if="sponsor.url" :to="sponsor.url" target="_blank">
+        <NuxtLink
+          v-if="sponsor.url"
+          :to="sponsor.url"
+          target="_blank"
+          name="Visit Sponsor"
+          aria-label="Visit Sponsor"
+        >
           <NuxtImg
             v-if="sponsor.alternativeLogo"
             :provider="provider"
@@ -40,7 +46,13 @@ const provider = computed(() => {
         :key="organizer.id"
         class="flex justify-center mb-4 md:mx-4"
       >
-        <NuxtLink v-if="organizer.url" :to="organizer.url" target="_blank">
+        <NuxtLink
+          v-if="organizer.url"
+          :to="organizer.url"
+          target="_blank"
+          name="Visit organizer"
+          aria-label="Visit organizer"
+        >
           <NuxtImg
             v-if="organizer.logo"
             :provider="provider"
