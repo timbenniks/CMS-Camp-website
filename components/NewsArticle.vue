@@ -21,7 +21,7 @@ const provider = computed(() => {
       :src="image.url"
       :width="image.width"
       :height="image.height"
-      sizes="sm:220px md:500px md:700px"
+      sizes="sm:390px md:500px md:700px"
       :alt="title || ''"
       class="lg:max-w-[469px] mb-8 lg:mb-0"
       fit="fit"

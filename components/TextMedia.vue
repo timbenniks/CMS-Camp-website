@@ -26,6 +26,7 @@ const provider = computed(() => {
         :alt="title || ''"
         class="md:w-2/4 mb-10 md:mb-0"
         loading="lazy"
+        fit="fit"
       />
     </div>
   </div>
