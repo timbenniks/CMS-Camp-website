@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 const page = await useGetContentForType({ slug: "home", type: "Page" });
-
 const { enabled } = usePreviewMode();
 
 useSeoMeta({

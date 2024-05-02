@@ -10,22 +10,11 @@ export async function useGetContentForType(properties: Props) {
   const { $preview } = useNuxtApp();
   const stage = $preview ? "DRAFT" : "PUBLISHED"
 
-  const { data, refresh } = await useAsyncGql(properties.type || 'Page', {
+  const { data } = await useAsyncGql(properties.type || 'Page', {
     //@ts-ignore
     slug: properties.slug,
     stage: stage as Stage
   });
-
-  // if ($preview) {
-  //   onNuxtReady(() => {
-  //     setInterval(() => {
-  //       console.log("[⚡️ preview mode]: refreshing")
-  //       refresh();
-  //       refreshNuxtData();
-  //     }, 3000)
-
-  //   })
-  // }
 
   let result = null;
   switch (properties.type) {
