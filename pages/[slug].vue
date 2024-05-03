@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 const route = useRoute();
 const { slug } = route.params;
+const { $preview } = useNuxtApp();
 const page = await useGetContentForType({ slug: slug as string, type: "Page" });
-const { enabled } = usePreviewMode();
 
 useSeoMeta({
-  title: `${enabled ? "⚡️ " : ""} ${page?.openGraphTitle}`,
+  title: `${$preview ? "⚡️ " : ""} ${page?.openGraphTitle}`,
   ogTitle: page?.openGraphTitle,
   description: page?.openGraphDescription,
   ogDescription: page?.openGraphDescription,
