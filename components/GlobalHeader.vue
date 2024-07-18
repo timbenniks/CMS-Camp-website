@@ -41,19 +41,19 @@ function toggle() {
     <div class="flex items-center">
       <ul
         v-if="navigationItems"
-        class="absolute top-[120px] text-center lg:text-left left-0 w-full z-20 bg-white lg:static lg:w-auto lg:bg-none lg:flex"
+        class="absolute top-[120px] text-center xl:text-left left-0 w-full z-20 bg-white xl:static xl:w-auto xl:bg-none xl:flex"
         :class="{ hidden: !open }"
       >
         <li>
-          <LogoWords class="lg:hidden w-[215px] h-[36px] mx-auto mb-2" />
+          <LogoWords class="xl:hidden w-[215px] h-[36px] mx-auto mb-2" />
         </li>
-        <li v-for="item in navigationItems" :key="item.id" class="py-3 lg:py-0">
+        <li v-for="item in navigationItems" :key="item.id" class="py-3 xl:py-0">
           <nuxt-link
             v-if="item?.page || item?.externalLink"
             :to="getUrl(item)"
             :target="item.externalLink ? '_blank' : '_self'"
             class="font-bold text-xl leading-7 tracking-wide"
-            :class="item.highlighted ? 'cta' : 'lg:mr-10'"
+            :class="item.highlighted ? 'cta xl:mr-10' : 'xl:mr-10'"
           >
             {{ item.label }}
           </nuxt-link>
@@ -69,7 +69,7 @@ function toggle() {
       </nuxt-link>
 
       <button
-        class="ml-8 nav-toggle relative w-16 h-[50px] bg-white lg:hidden transform transition duration-500 ease-in-out"
+        class="ml-8 nav-toggle relative w-16 h-[50px] bg-white xl:hidden transform transition duration-500 ease-in-out"
         :class="open ? 'open' : ''"
         @click="toggle()"
       >
